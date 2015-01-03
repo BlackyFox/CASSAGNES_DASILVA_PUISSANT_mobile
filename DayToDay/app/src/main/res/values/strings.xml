@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DayToDay</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="title_activity_meteo">MeteoCity</string>
+    <string name="location_ville"><u>Ville :</u></string>
+    <string name="location_pays"><u>Pays :</u></string>
+    <string name="pays"><u>Pays :</u></string>
+    <string name="temperature"><u>Temperature :</u></string>
+    <string name="humidité"><u>Humidité :</u></string>
+    <string name="pression"><u>Pression :</u></string>
+    <string name="bget">Rechercher</string>
+    <string name="hint_ville">Entrez la ville (Ex : Paris)</string>
+    <string name="hint_pays">Entrez le pays (Ex : France)</string>
+    <string name="condition"><u>Condition météo :</u></string>
+    <string name="m_help">A propos</string>
+    <string name="m_home">Accueil</string>
+    <string name="meteo">Météo</string>
+    <string name="organizer">Organiseur</string>
+    <string name="news">Actualités</string>
+    <string name="realise">Cette application à été réalisée par:\n<ol><li>Lucien CASSAGNES\n</li>
+        <li>Thibaut DA SILVA\n</li><li>Antoine PUISSANT\n</li></ol>\nLes informations
+        météorologiques sont récupérées sur le site\n<u>http://openweathermap.org/api</u></string>
+    <string name="title_activity_agenda">Mon Agenda</string>
+    <string name="clear">Effacer</string>
+    <string name="title_activity_new_task">Nouvelle tâche</string>
+
+    <string name="to_agenda">Vers Agenda</string>
+    <string name="title_activity_add_task">Nouvelle tâche</string>
+    <string name="nouvelle_tache">Nouvelle Tâche</string>
+    <string name="taskname">ex: Déjeuner avec Isabelle</string>
+    <string name="intitulé">Intitulé</string>
+    <string name="type">Type :</string>
+    <string name="date">Date :</string>
+    <string name="heure">Heure :</string>
+    <string name="recup">Recupération formulaire</string>
+    <string name="task_prompt">Choisissez un type de tâche</string>
+    <string name="date_button_set">  Set Date  </string>
+    <string name="time_button_set">  Set Time  </string>
+
+    <string name="delete">Supprimer toutes les tâches</string>
+
+    <string-array name="menu">
+        <item>Supprimer la tâche</item>
+    </string-array>
+
+    <string-array name="tasks_arrays">
+        <item>Déjeuner</item>
+        <item>Diner</item>
+        <item>Rendez-vous</item>
+        <item>Réunion</item>
+        <item>Soirée</item>
+        <item>Autre</item>
+    </string-array>
+
+</resources>
