@@ -138,8 +138,8 @@ public class MeteoActivity extends ActionBarActivity {
                 showNotification(country.getText().toString(), temperature.getText().toString());
             }
             if(obj.getEtat() == "do not exist"){
-                Toast.makeText(getApplicationContext(), "Spelling is wrong, please check and " +
-                        "submit again", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Cette ville n'existe pas, vérifiez " +
+                        "l'othrographe et recommencez", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -177,8 +177,8 @@ public class MeteoActivity extends ActionBarActivity {
     };
     private View.OnClickListener bget_click = new View.OnClickListener(){
         public void onClick(View v){
-            if(location_ville.getText().toString().matches("") && location_pays.getText()
-                    .toString().matches("")) {
+            if((location_ville.getText().toString().matches("") && location_pays.getText()
+                    .toString().matches("")) || (location_ville.getText().toString().matches(""))) {
                 Toast.makeText(getApplicationContext(), "Entrez une ville", Toast.LENGTH_LONG)
                         .show();
             }else {
@@ -264,7 +264,7 @@ public class MeteoActivity extends ActionBarActivity {
             }
             case R.id.m_home: {
                 if(this.getClass().getSimpleName().matches("MainActivity")) {
-                    CharSequence text = "Already on the home page";
+                    CharSequence text = "Ceci est la page d'accueil";
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(getApplicationContext(), text, duration);
@@ -306,7 +306,7 @@ public class MeteoActivity extends ActionBarActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(MeteoActivity.this);
-            pDialog.setMessage("Loading Image ....");
+            pDialog.setMessage("Chargement de l'image ....");
             pDialog.show();
         }
         protected Bitmap doInBackground(String... args) {
@@ -334,8 +334,8 @@ public class MeteoActivity extends ActionBarActivity {
                 pDialog.dismiss();
             }else{
                 pDialog.dismiss();
-                Toast.makeText(MeteoActivity.this, "Image Does Not exist or Network Error",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(MeteoActivity.this, "L'image n'existe pas ou vous êtes hors connexion",
+                        Toast.LENGTH_LONG).show();
             }
         }
     }
