@@ -138,6 +138,7 @@ public class MeteoActivity extends ActionBarActivity {
                 showNotification(country.getText().toString(), temperature.getText().toString());
             }
             if(obj.getEtat() == "do not exist"){
+                bget.setEnabled(true);
                 Toast.makeText(getApplicationContext(), "Cette ville n'existe pas, vérifiez " +
                         "l'othrographe et recommencez", Toast.LENGTH_LONG).show();
             }
@@ -183,6 +184,9 @@ public class MeteoActivity extends ActionBarActivity {
                         .show();
             }else {
                 hideSoftKeyboard();
+                Toast.makeText(getApplicationContext(), "Nous recherchons la météo de "
+                        +location_ville.getText()+", veuillez patienter", Toast.LENGTH_SHORT).show();
+                bget.setEnabled(false);
                 country.setText("");
                 Wdate.setText("");
                 temperature.setText("");
@@ -191,7 +195,6 @@ public class MeteoActivity extends ActionBarActivity {
                 wdesc.setText("");
                 img.setImageBitmap(null);
 
-                //Toast.makeText(getApplicationContext(), "URL OK", Toast.LENGTH_LONG).show();
                 if(location_pays.getText().toString().matches("")){
                     String url = location_ville.getText().toString();
                     String url_totale = urlStart + url + "&lang=fr";
@@ -329,6 +332,7 @@ public class MeteoActivity extends ActionBarActivity {
             return bitmap;
         }
         protected void onPostExecute(Bitmap image) {
+            bget.setEnabled(true);
             if(image != null){
                 img.setImageBitmap(image);
                 pDialog.dismiss();
